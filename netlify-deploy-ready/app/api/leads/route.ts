@@ -3,6 +3,8 @@ import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { saveLocalLead, Lead } from '@/lib/store';
 import { sendLeadNotificationEmail } from '@/lib/email';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
